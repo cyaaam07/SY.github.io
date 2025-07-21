@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -7,298 +8,113 @@
 html, body {
   height: 100%;
   font-family: 'Roboto', sans-serif;
-  scroll-behavior: smooth;
+  background: #000;
   color: #fff;
-  background-color: #000;
+  overflow-x: hidden;
 }
 
 
-body {
-  background: url("https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/the-smiths-red-art-lydia-wade.jpg")
-    no-repeat center center fixed;
-  background-size: cover;
-  background-blend-mode: multiply;
-  background-color: rgba(0, 0, 0, 0.9);
-}
-
-
-.overlay {
-  background: rgba(0, 0, 0, 0.88);
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding-bottom: 40px;
-}
-
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 40px 80px;
-  background: rgba(90, 0, 0, 0.65);
-  border-bottom: 1px solid #3d0000;
-  backdrop-filter: blur(6px);
-  box-shadow: 0 4px 20px rgba(255, 0, 0, 0.1);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  transition: all 0.3s ease-in-out;
-}
-
-header.scrolled {
-  background: rgba(90, 0, 0, 0.95);
-  box-shadow: 0 6px 25px rgba(255, 0, 0, 0.3);
-}
-
-.logo {
-  font-family: 'Anton', sans-serif;
-  font-size: 3.5rem;
-  color: #ff4d4d;
-  text-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
-  transition: all 0.3s ease-in-out;
-}
-
-.logo:hover {
-  text-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
-  transform: scale(1.05);
-}
-
-nav {
-  display: flex;
-  align-items: center;
-}
-
-nav a {
-  margin-left: 40px;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #fff;
-  text-decoration: none;
+.hero {
+  height: 100vh;
+  background: url('https://i.ibb.co/z5tJJ5N/smiths-bg.jpg') center/cover no-repeat;
   position: relative;
-  transition: color 0.3s ease-in-out;
-}
-
-nav a::after {
-  content: '';
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  background: #ff4d4d;
-  left: 0;
-  bottom: -6px;
-  transition: width 0.3s ease;
-}
-
-nav a:hover {
-  color: #ff4d4d;
-}
-
-nav a:hover::after {
-  width: 100%;
-}
-
-
-main {
-  flex: 1;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  padding: 120px 20px;
-  position: relative;
-  z-index: 10;
 }
 
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(4px);
+  z-index: 1;
+}
 
-.lyrics blockquote {
-  font-size: 2.6rem;
-  font-style: italic;
-  color: #ff4d4d;
+.content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
   max-width: 800px;
-  margin: 60px auto;
-  text-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
-  position: relative;
-  animation: flicker 4s infinite ease-in-out;
-  transition: all 0.4s ease;
+  padding: 0 20px;
+  animation: fadeIn 2s ease forwards;
 }
 
-.lyrics blockquote:hover {
-  transform: scale(1.03);
-  text-shadow: 0 0 25px rgba(255, 0, 0, 0.5);
+.band-name {
+  font-family: 'Anton', sans-serif;
+  font-size: 5rem;
+  color: #ff4d4d;
+  text-shadow: 0 0 20px rgba(255, 77, 77, 0.6);
+  margin-bottom: 20px;
 }
 
-@keyframes flicker {
-  0% { opacity: 1; }
-  40% { opacity: 0.85; }
-  60% { opacity: 1; }
-  70% { opacity: 0.6; }
-  100% { opacity: 1; }
+.tagline {
+  font-size: 1.6rem;
+  font-style: italic;
+  color: #eee;
+  margin-bottom: 40px;
+  animation: flicker 3s infinite;
 }
 
-
-.connect {
-  margin-top: 80px;
-  text-align: center;
-}
-
-.connect h2 {
-  font-size: 2.2rem;
-  color: #fff;
-  margin-bottom: 30px;
-  text-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
-}
 
 .social-icons {
   display: flex;
   justify-content: center;
-  gap: 50px;
-  margin-top: 20px;
-  font-size: 2.8rem;
+  gap: 30px;
+  margin-bottom: 40px;
 }
 
 .social-icons a {
-  color: #ffffff;
-  transition: all 0.3s ease-in-out;
-  filter: drop-shadow(0 0 2px #000);
+  color: white;
+  font-size: 2.2rem;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .social-icons a:hover {
   color: #ff4d4d;
-  transform: scale(1.2);
-  text-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
+  transform: scale(1.3);
+  text-shadow: 0 0 15px rgba(255, 77, 77, 0.8);
+}
+
+
+.cta-button {
+  padding: 14px 36px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: #ff4d4d;
+  color: #000;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 0 10px rgba(255, 77, 77, 0.5);
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #ff0000;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
 }
 
 
 footer {
-  margin-top: 60px;
-  padding: 25px 10px;
-  background: rgba(90, 0, 0, 0.65);
-  color: #bbb;
-  font-size: 1rem;
   text-align: center;
-  border-top: 1px solid #3d0000;
-  box-shadow: 0 -4px 20px rgba(255, 0, 0, 0.1);
+  padding: 20px;
+  background: #111;
+  color: #aaa;
+  font-size: 0.9rem;
+  border-top: 1px solid #333;
 }
 
 
-.glow-text {
-  color: #ff4d4d;
-  text-shadow:
-    0 0 5px #ff0000,
-    0 0 10px #ff0000,
-    0 0 20px #ff0000,
-    0 0 30px #ff0000;
-}
-
-
-.button-red {
-  padding: 12px 28px;
-  background: #ff4d4d;
-  color: #000;
-  border: none;
-  border-radius: 4px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.button-red:hover {
-  background: #ff0000;
-  box-shadow: 0 0 12px rgba(255, 0, 0, 0.5);
-}
-
-
-@media (max-width: 1024px) {
-  .logo {
-    font-size: 2.5rem;
-  }
-
-  nav a {
-    margin-left: 20px;
-    font-size: 1rem;
-  }
-
-  .lyrics blockquote {
-    font-size: 2rem;
-  }
-}
-
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 20px;
-  }
-
-  nav {
-    margin-top: 20px;
-    flex-direction: column;
-  }
-
-  nav a {
-    margin: 10px 0;
-  }
-
-  .lyrics blockquote {
-    font-size: 1.6rem;
-  }
-
-  .social-icons {
-    gap: 30px;
-    font-size: 2rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .logo {
-    font-size: 2rem;
-  }
-
-  .connect h2 {
-    font-size: 1.5rem;
-  }
-
-  .social-icons {
-    gap: 20px;
-    font-size: 1.6rem;
-  }
-
-  .lyrics blockquote {
-    font-size: 1.3rem;
-  }
-
-  footer {
-    font-size: 0.85rem;
-  }
-}
-
-.hero {
-  text-align: center;
-  margin-top: 100px;
-  animation: fadeInUp 2s ease-out;
-}
-
-.hero-title {
-  font-size: 3.8rem;
-  color: #fff;
-  font-family: 'Anton', sans-serif;
-  text-shadow: 0 0 20px rgba(255, 77, 77, 0.7);
-  margin-bottom: 20px;
-}
-
-.hero-subtitle {
-  font-size: 1.4rem;
-  color: #ccc;
-  margin-bottom: 30px;
-}
-
-@keyframes fadeInUp {
+@keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(50px);
+    transform: translateY(30px);
   }
   to {
     opacity: 1;
@@ -306,20 +122,39 @@ footer {
   }
 }
 
-/* Fix icon visibility + accessibility */
-.social-icons a i {
-  font-size: 2.8rem;
-  background: #000;
-  padding: 15px;
-  border-radius: 50%;
-  border: 2px solid #ff4d4d;
-  transition: all 0.4s ease-in-out;
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.85; }
+  70% { opacity: 0.5; }
+  90% { opacity: 1; }
 }
 
-.social-icons a:hover i {
-  background: #ff4d4d;
-  color: #000;
-  transform: scale(1.15) rotate(2deg);
-  box-shadow: 0 0 20px rgba(255, 77, 77, 0.8);
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .band-name {
+    font-size: 3.5rem;
+  }
+
+  .tagline {
+    font-size: 1.2rem;
+  }
+
+  .social-icons {
+    gap: 20px;
+  }
+
+  .social-icons a {
+    font-size: 1.8rem;
+  }
 }
 
+@media (max-width: 480px) {
+  .band-name {
+    font-size: 2.5rem;
+  }
+
+  .cta-button {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+  }
+}
