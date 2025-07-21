@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doe een Suggestie - Tegelwip Atlas</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="https://placehold.co/32x32/28a745/ffffff?text=TA" type="image/x-icon">
+    <style>
+
+        .form-section {
+            padding: 60px 0;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+
+        .form-container {
+            max-width: 700px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: left;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+            box-sizing: border-box;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .form-group button {
+            background-color: #6c757d;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-group button:hover {
+            background-color: #5a6268;
+        }
+
+
+        @media (max-width: 768px) {
+            .form-container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="/">Tegelwip Atlas</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html#map-section">Kaart</a></li>
+                    <li><a href="projecten.html">Projecten</a></li>
+                    <li><a href="informatie.html">Informatie</a></li>
+                    <li><a href="meld-actie.html">Doe Mee</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <div class="container">
+                <h2>Heb je een suggestie voor de Tegelwip Atlas?</h2>
+                <p>We staan altijd open voor feedback en nieuwe ideeën! Of het nu gaat om een locatie met veel vergroeningspotentieel, een verbetering voor de website, of een algemeen idee om Nederland te vergroenen, laat het ons weten.</p>
+
+                <div class="form-container">
+                    <form action="suggestie-process.php" method="POST">
+
+                    <div class="form-group">
+                            <label for="naam">Jouw Naam (optioneel):</label>
+                            <input type="text" id="naam" name="naam">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mailadres (optioneel):</label>
+                            <input type="email" id="email" name="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="onderwerp">Onderwerp:</label>
+                            <input type="text" id="onderwerp" name="onderwerp" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="suggestie">Jouw suggestie:</label>
+                            <textarea id="suggestie" name="suggestie" rows="8" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit">Verstuur suggestie</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Tegelwip Atlas. Alle rechten voorbehouden.</p>
+            <div class="social-media">
+                <a href="#" target="_blank"><img src="https://placehold.co/30x30/2c3e50/ffffff?text=FB" alt="Facebook"></a>
+                <a href="#" target="_blank"><img src="https://placehold.co/30x30/2c3e50/ffffff?text=IN" alt="Instagram"></a>
+                <a href="#" target="_blank"><img src="https://placehold.co/30x30/2c3e50/ffffff?text=LI" alt="LinkedIn"></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tegelwip Atlas - Vergroen Nederland</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<header>
+    <div class="container">
+        <h1><a href="/">Tegelwip Atlas</a></h1>
+        <nav>
+            <ul>
+                <li><a href="#map-section">Kaart</a></li>
+                <li><a href="#project-section">Projecten</a></li>
+                <li><a href="#info-section">Informatie</a></li>
+                <li><a href="#participate-section">Doe Mee</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+<main>
+    <section id="hero">
+        <div class="container">
+            <h2>Nederland vergroenen, stap voor stap, tegel voor tegel.</h2>
+            <p>Ontdek de verstening in jouw buurt en de mogelijkheden om te vergroenen.</p>
+            <a href="#map-section" class="button-primary">Bekijk de kaart</a>
+        </div>
+    </section>
+
+    <section id="map-section" class="map-section">
+        <div class="container">
+            <h2>Interactieve Kaart</h2>
+            <div class="map-filters">
+                <button class="filter-button active" data-layer="verstening">Toon Verstening</button>
+                <button class="filter-button" data-layer="potentieel">Toon Vergroeningspotentieel</button>
+                <button class="filter-button" data-layer="succesverhalen">Toon Succesverhalen</button>
+            </div>
+            <div id="mapid"></div>
+        </div>
+    </section>
+
+    <section id="project-section" class="section-alt">
+        <div class="container">
+            <h2>Onze Groene Projecten</h2>
+            <p>Laat je inspireren door succesvolle vergroeningsinitiatieven door heel Nederland. Van groene daken tot bloeiende tuinen, ontdek hoe vergroening onze omgeving ten goede komt.</p>
+
+
+            <div class="project-button-wrapper">
+                <a href="projecten.html" class="button-primary">Bekijk alle projecten</a>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="info-section">
+        <div class="container">
+            <h2>Waarom Vergroenen?</h2>
+            <div class="info-grid">
+                <div class="info-item">
+                    <h3>Minder Hittestress</h3>
+                    <p>Groen koelt de omgeving af en vermindert hittestress in de stad.</p>
+                </div>
+                <div class="info-item">
+                    <h3>Meer Biodiversiteit</h3>
+                    <p>Planten en bomen trekken insecten, vogels en kleine zoogdieren aan.</p>
+                </div>
+                <div class="info-item">
+                    <h3>Betere Waterafvoer</h3>
+                    <p>Groene tuinen laten regenwater de grond in sijpelen, wat overstromingen voorkomt.</p>
+                </div>
+                <div class="info-item">
+                    <h3>Gezondere Leefomgeving</h3>
+                    <p>Groen vermindert stress, verbetert de luchtkwaliteit en nodigt uit tot bewegen.</p>
+                </div>
+            </div>
+            <a href="informatie.html" class="button-secondary">Meer informatie</a>
+        </div>
+    </section>
+
+    <section id="participate-section" class="section-alt">
+        <div class="container">
+            <h2>Doe Mee!</h2>
+            <p>Elke tegel die je wipt, draagt bij aan een groener Nederland. Meld jouw actie aan of dien een suggestie in!</p>
+            <div class="participate-options">
+                <a href="meld-actie.html" class="button-primary">Meld je Tegelwip aan</a>
+                <a href="suggestie.html" class="button-secondary">Doe een suggestie</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2025 Tegelwip Atlas | Sihaam , Gabrielle , Manouk - D2C</p>
+        <div class="social-media">
+            <a href="#" target="_blank"><img src="images/icon-facebook.png" alt="Facebook"></a>
+            <a href="#" target="_blank"><img src="images/icon-instagram.png" alt="Instagram"></a>
+            <a href="#" target="_blank"><img src="images/icon-linkedin.png" alt="LinkedIn"></a>
+        </div>
+    </div>
+</footer>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
