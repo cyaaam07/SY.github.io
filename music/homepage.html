@@ -2,28 +2,74 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Smiths</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Smiths - Official Homepage</title>
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+  
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <div class="hero">
-    <div class="content">
-      <h1 class="band-name">The Smiths</h1>
-      <p class="tagline">"There is a light that never goes out."</p>
-      <div class="social-icons">
-        <a href="https://open.spotify.com/artist/3yY2gUcIsjMr8hjo51PoJ8" target="_blank" aria-label="Spotify"><i class="fab fa-spotify"></i></a>
-        <a href="https://www.instagram.com/thesmithsofficial/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.youtube.com/channel/UC-sdfo_ho6Nq3OH8RUHBrNg" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-      </div>
-      <a href="#" class="cta-button">Explore Discography</a>
-    </div>
-  </div>
 
-  <footer>
-    <p>Sihaam Yussuf – All rights reserved.</p>
+ 
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">The Smiths</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#discography">Discography</a></li>
+        <li><a href="#tours">Tours</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1 class="hero-title">The Smiths</h1>
+      <p class="hero-quote">"In the depths of melancholy, we find our truest voice."</p>
+      <a href="#discography" class="cta-button">Explore Discography</a>
+    </div>
+  </section>
+
+  <!-- Band Section -->
+  <section class="band-section">
+    <div class="band-container">
+      <div class="band-image">
+        <img src="https://images.unsplash.com/photo-1542206395-9feb3edaa68b?fit=crop&w=800&q=80" alt="The Smiths Band Photo" />
+      </div>
+      <div class="band-info">
+        <h2>Legendary</h2>
+        <p>The Smiths were the voice of a generation — a powerful blend of poetic introspection and unforgettable melody.</p>
+        <p>From the haunting vocals to jangly guitars, their sound remains timeless and their influence, unmatched.</p>
+        <p>Born in Manchester, heard around the world — they changed music forever.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="social-section">
+    <h2 class="social-title">Follow The Smiths</h2>
+    <div class="social-icons">
+      <a href="#" class="social-icon" aria-label="Spotify"><i class="fab fa-spotify"></i></a>
+      <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="social-icon" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+     
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 The Smiths. All Rights Reserved. | Designed by <span class="designer">You</span></p>
   </footer>
+
 </body>
 </html>
